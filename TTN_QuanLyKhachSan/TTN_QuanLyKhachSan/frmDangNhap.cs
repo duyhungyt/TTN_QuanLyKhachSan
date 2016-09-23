@@ -52,5 +52,11 @@ namespace TTN_QuanLyKhachSan
         {
             if (e.KeyCode == Keys.Enter) btn_DangNhap_Click(null,null);
         }
+
+        private void chkLuuTK_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkHienMK.Checked) txtPass.PasswordChar = '\0';
+            else txtPass.PasswordChar = '*';
+        }
     }
 }

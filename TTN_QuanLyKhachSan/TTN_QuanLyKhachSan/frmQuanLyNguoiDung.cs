@@ -23,6 +23,9 @@ namespace TTN_QuanLyKhachSan
 
         private void frmQuanLyNguoiDung_Load(object sender, EventArgs e)
         {
+            tltChuThich.SetToolTip(btnLuu, "Lưu thông tin người dùng");
+            tltChuThich.SetToolTip(btnThemTK, "Thêm người dùng");
+            tltChuThich.SetToolTip(btnXoa, "Xóa người dùng");
             lstDanhSachNV.Items.Add(frmMain._taikhoan);
             string _loaiTK = DAL_TK.LayLoatTK(frmMain._taikhoan);
             if (_loaiTK == "1")

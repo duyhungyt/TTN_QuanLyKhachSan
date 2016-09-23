@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.frmThoat = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.chkHienMK = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,7 +61,7 @@
             // 
             // btn_DangNhap
             // 
-            this.btn_DangNhap.Location = new System.Drawing.Point(164, 93);
+            this.btn_DangNhap.Location = new System.Drawing.Point(164, 109);
             this.btn_DangNhap.Name = "btn_DangNhap";
             this.btn_DangNhap.Size = new System.Drawing.Size(109, 28);
             this.btn_DangNhap.TabIndex = 2;
@@ -88,7 +89,7 @@
             // 
             // frmThoat
             // 
-            this.frmThoat.Location = new System.Drawing.Point(299, 93);
+            this.frmThoat.Location = new System.Drawing.Point(299, 109);
             this.frmThoat.Name = "frmThoat";
             this.frmThoat.Size = new System.Drawing.Size(109, 28);
             this.frmThoat.TabIndex = 3;
@@ -101,16 +102,28 @@
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(121, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(119, 125);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
+            // 
+            // chkHienMK
+            // 
+            this.chkHienMK.AutoSize = true;
+            this.chkHienMK.Location = new System.Drawing.Point(257, 80);
+            this.chkHienMK.Name = "chkHienMK";
+            this.chkHienMK.Size = new System.Drawing.Size(115, 23);
+            this.chkHienMK.TabIndex = 5;
+            this.chkHienMK.Text = "Hiện mật khẩu";
+            this.chkHienMK.UseVisualStyleBackColor = true;
+            this.chkHienMK.CheckedChanged += new System.EventHandler(this.chkLuuTK_CheckedChanged);
             // 
             // frmDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 135);
+            this.ClientSize = new System.Drawing.Size(422, 148);
+            this.Controls.Add(this.chkHienMK);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -137,5 +150,6 @@
         private System.Windows.Forms.Button frmThoat;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.TextBox txtMa;
+        private System.Windows.Forms.CheckBox chkHienMK;
     }
 }
