@@ -1,0 +1,5 @@
+F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\Entity\bin\Debug\Entity.dll
+F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\Entity\bin\Debug\Entity.pdb
+F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\Entity\obj\Debug\Entity.csprojResolveAssemblyReference.cache
+F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\Entity\obj\Debug\Entity.dll
+F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\Entity\obj\Debug\Entity.pdb

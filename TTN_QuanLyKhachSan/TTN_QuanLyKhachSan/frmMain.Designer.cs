@@ -67,6 +67,7 @@
             this.btnNguoiDung.TabIndex = 1;
             this.btnNguoiDung.Text = "Quản lý người dùng";
             this.btnNguoiDung.UseVisualStyleBackColor = true;
+            this.btnNguoiDung.Click += new System.EventHandler(this.btnNguoiDung_Click);
             // 
             // btnPhong
             // 
@@ -147,9 +148,10 @@
             this.Controls.Add(this.mnuChucNang);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.MainMenuStrip = this.mnuChucNang;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmMain";
             this.Text = "Main";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.mnuChucNang.ResumeLayout(false);
             this.mnuChucNang.PerformLayout();
             this.ResumeLayout(false);
