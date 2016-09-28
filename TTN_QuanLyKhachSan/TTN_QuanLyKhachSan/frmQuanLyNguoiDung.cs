@@ -41,6 +41,7 @@ namespace TTN_QuanLyKhachSan
             tltChuThich.SetToolTip(btnLuu, "Lưu thông tin người dùng");
             tltChuThich.SetToolTip(btnThemTK, "Thêm người dùng");
             tltChuThich.SetToolTip(btnXoaTK, "Xóa người dùng");
+            tltChuThich.SetToolTip(btnXoaTT, "Xóa thông tin người dùng");
             frmMain._taikhoan = frmMain._taikhoan.ToUpper();
             if (frmMain._taikhoan == "ADMIN")
             {
@@ -79,7 +80,8 @@ namespace TTN_QuanLyKhachSan
             {
                 txtHoTen.Text = tb.Rows[0]["TenNV"].ToString();
                 cboGioiTinh.Text = tb.Rows[0]["GioiTinh"].ToString();
-                dtpNgaySinh.Text =  tb.Rows[0]["NgaySinh"].ToString();
+                if (tb.Rows[0]["NgaySinh"].ToString() != "") dtpNgaySinh.Text = tb.Rows[0]["NgaySinh"].ToString();
+                else dtpNgaySinh.Value = new DateTime(1900,1,1);
                 txtCMND.Text = tb.Rows[0]["CMND"].ToString();
                 txtSoDT.Text = tb.Rows[0]["SoDT"].ToString();
                 txtDiaChi.Text = tb.Rows[0]["DiaChi"].ToString();
@@ -88,7 +90,7 @@ namespace TTN_QuanLyKhachSan
             {
                 txtHoTen.ResetText();
                 cboGioiTinh.ResetText();
-                dtpNgaySinh.ResetText();
+                dtpNgaySinh.Value = new DateTime(1900, 1, 1);
                 txtCMND.ResetText();
                 txtSoDT.ResetText();
                 txtDiaChi.ResetText();
