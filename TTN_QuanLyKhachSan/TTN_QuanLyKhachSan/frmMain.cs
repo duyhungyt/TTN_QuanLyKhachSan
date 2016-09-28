@@ -34,5 +34,15 @@ namespace TTN_QuanLyKhachSan
             Form frm = new frmQuanLyNguoiDung();
             frm.ShowDialog();
         }
+
+        private void thoátToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void đăngNhậpLạiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
     }
 }

@@ -28,9 +28,22 @@ namespace DAL
         {
             return connect.GetDataTable("select MaNV from tblTaiKhoan where " + dk);
         }
-        public void DoiMatKhau(string mk)
+        public void DoiMatKhau(EC_TaiKhoan EC_TK)
         {
-
+            connect.ThucHienLenh("update tblTaiKhoan set MatKhau = '" + EC_TK.MatKhau + "' where MaNV = '" + EC_TK.MaNV + "'");
+        }
+        public void DoiLoai(EC_TaiKhoan EC_TK)
+        {
+            connect.ThucHienLenh("update tblTaiKhoan set LoaiTK = '" + EC_TK.LoaiTK + "' where MaNV = '" + EC_TK.MaNV + "'");
+        }
+        public void XoaTK(EC_TaiKhoan EC_TK)
+        {
+            connect.ThucHienLenh("delete from tblNhanVien where MaNV = '" + EC_TK.MaNV + "'");
+            connect.ThucHienLenh("delete from tblTaiKhoan where MaNV = '" + EC_TK.MaNV + "'");
+        }
+        public void ThemTK(EC_TaiKhoan EC_TK)
+        {
+            connect.ThucHienLenh("insert into tblTaiKhoan(MaNV, MatKhau, LoaiTK) values(N'" + EC_TK.MaNV+ "', N'" + EC_TK.MatKhau + "', '" + EC_TK.LoaiTK + "') ");
         }
     }
 }

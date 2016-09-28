@@ -33,7 +33,6 @@ namespace TTN_QuanLyKhachSan
                 if (txtPass.Text == pass)
                 {
                     frmMain._taikhoan = txtMa.Text;
-                    MessageBox.Show("Đăng nhập thành công!!!");
                     DialogResult = DialogResult.OK;
                     this.Close();
                 }
