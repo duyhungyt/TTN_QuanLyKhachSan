@@ -44,5 +44,14 @@ namespace TTN_QuanLyKhachSan
         {
             Application.Restart();
         }
+
+        private void frmMain_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.F1)
+            {
+                MessageBox.Show("f1 dc an");
+            }
+        }
+
     }
 }
