@@ -33,6 +33,8 @@ namespace TTN_QuanLyKhachSan
                 if (txtPass.Text == pass)
                 {
                     frmMain._taikhoan = txtMa.Text;
+                    Properties.Settings.Default.user = txtMa.Text;
+                    Properties.Settings.Default.Save();
                     DialogResult = DialogResult.OK;
                     this.Close();
                 }
@@ -56,6 +58,11 @@ namespace TTN_QuanLyKhachSan
         {
             if (chkHienMK.Checked) txtPass.PasswordChar = '\0';
             else txtPass.PasswordChar = '*';
+        }
+
+        private void frmDangNhap_Load(object sender, EventArgs e)
+        {
+            txtMa.Text = Properties.Settings.Default.user;
         }
     }
 }
