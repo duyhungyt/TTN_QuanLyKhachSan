@@ -53,5 +53,11 @@ namespace TTN_QuanLyKhachSan
             }
         }
 
+        private void btnVatDung_Click(object sender, EventArgs e)
+        {
+            Form frmTB = new frmThietBi();
+            frmTB.ShowDialog();
+        }
+
     }
 }

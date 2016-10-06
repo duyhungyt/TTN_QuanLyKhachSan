@@ -115,6 +115,7 @@
             this.btnVatDung.TabIndex = 2;
             this.btnVatDung.Text = "Quản lý vật dụng";
             this.btnVatDung.UseVisualStyleBackColor = true;
+            this.btnVatDung.Click += new System.EventHandler(this.btnVatDung_Click);
             this.btnVatDung.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             // 
             // btnThuePhong

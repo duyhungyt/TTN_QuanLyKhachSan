@@ -39,25 +39,22 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCapNhap = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.btnLuu = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.colMaPh = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colThietBi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colNhaSanXuat = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnCapNhap = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,6 +164,16 @@
             this.panel2.Size = new System.Drawing.Size(909, 415);
             this.panel2.TabIndex = 0;
             // 
+            // btnCapNhap
+            // 
+            this.btnCapNhap.Location = new System.Drawing.Point(11, 247);
+            this.btnCapNhap.Name = "btnCapNhap";
+            this.btnCapNhap.Size = new System.Drawing.Size(75, 50);
+            this.btnCapNhap.TabIndex = 13;
+            this.btnCapNhap.Text = "Cập nhập DL";
+            this.btnCapNhap.UseVisualStyleBackColor = true;
+            this.btnCapNhap.Click += new System.EventHandler(this.btnCapNhap_Click);
+            // 
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(11, 303);
@@ -219,28 +226,11 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.toolStrip1);
             this.panel3.Controls.Add(this.dgvDanhSach);
             this.panel3.Location = new System.Drawing.Point(92, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(814, 409);
             this.panel3.TabIndex = 8;
-            // 
-            // toolStrip1
-            // 
-            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripLabel1});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-            this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(814, 25);
-            this.toolStrip1.TabIndex = 2;
-            this.toolStrip1.Text = "toolStrip1";
-            // 
-            // toolStripLabel1
-            // 
-            this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(86, 22);
-            this.toolStripLabel1.Text = "toolStripLabel1";
             // 
             // dgvDanhSach
             // 
@@ -250,9 +240,10 @@
             this.colThietBi,
             this.colSoLuong,
             this.colNhaSanXuat});
-            this.dgvDanhSach.Location = new System.Drawing.Point(3, 28);
+            this.dgvDanhSach.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDanhSach.Location = new System.Drawing.Point(0, 0);
             this.dgvDanhSach.Name = "dgvDanhSach";
-            this.dgvDanhSach.Size = new System.Drawing.Size(811, 378);
+            this.dgvDanhSach.Size = new System.Drawing.Size(814, 409);
             this.dgvDanhSach.TabIndex = 1;
             this.dgvDanhSach.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellClick);
             // 
@@ -284,16 +275,6 @@
             this.colNhaSanXuat.HeaderText = "Nhà sản xuất";
             this.colNhaSanXuat.Name = "colNhaSanXuat";
             // 
-            // btnCapNhap
-            // 
-            this.btnCapNhap.Location = new System.Drawing.Point(11, 247);
-            this.btnCapNhap.Name = "btnCapNhap";
-            this.btnCapNhap.Size = new System.Drawing.Size(75, 50);
-            this.btnCapNhap.TabIndex = 13;
-            this.btnCapNhap.Text = "Cập nhập DL";
-            this.btnCapNhap.UseVisualStyleBackColor = true;
-            this.btnCapNhap.Click += new System.EventHandler(this.btnCapNhap_Click);
-            // 
             // frmThietBi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -302,16 +283,13 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmThietBi";
-            this.Text = "frmThietBi";
+            this.Text = "Quản lý thiết bị";
             this.Load += new System.EventHandler(this.frmThietBi_Load);
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.toolStrip1.ResumeLayout(false);
-            this.toolStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
             this.ResumeLayout(false);
 
@@ -336,8 +314,6 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel toolStripLabel1;
         private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.DataGridViewTextBoxColumn colMaPh;
         private System.Windows.Forms.DataGridViewTextBoxColumn colThietBi;

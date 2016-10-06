@@ -15,3 +15,4 @@ F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSa
 F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.exe
 F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.pdb
 F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.frmQuanLyNguoiDung.resources
+F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.frmThietBi.resources

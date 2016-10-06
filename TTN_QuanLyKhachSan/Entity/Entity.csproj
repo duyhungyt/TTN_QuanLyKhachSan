@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="EC_NhanVien.cs" />
     <Compile Include="EC_TaiKhoan.cs" />
+    <Compile Include="EC_ThietBi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
