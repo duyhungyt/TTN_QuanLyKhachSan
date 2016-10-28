@@ -28,9 +28,19 @@ namespace DAL
             connect.ThucHienLenh("update tblDichVu set TenDV = N'" + EC_DV.TenDV + "', Gia = N'" + EC_DV.Gia + "'  where MaDV = '" + EC_DV.MaDV + "'");
         }
 
-        public void XoaTTDichVu(EC_DichVu EC_DV)
+        public int XoaTTDichVu(EC_DichVu EC_DV)
         {
-            connect.ThucHienLenh("delete from tblDichVu where MaDV = '" + EC_DV.MaDV + "'");
+            return connect.ThucHienLenh("delete from tblDichVu where MaDV = '" + EC_DV.MaDV + "'");
+        }
+    
+        public DataTable GetAll()
+        {
+            return connect.GetDataTable(@"select * from tblDichVu");
+        }
+
+        public DataTable GetAll(string dk)
+        {
+            return connect.GetDataTable(@"select * from tblDichVu where " + dk);
         }
     }
 }

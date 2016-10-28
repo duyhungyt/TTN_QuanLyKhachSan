@@ -105,6 +105,7 @@
             this.btnPhong.TabIndex = 1;
             this.btnPhong.Text = "Quản lý phòng";
             this.btnPhong.UseVisualStyleBackColor = true;
+            this.btnPhong.Click += new System.EventHandler(this.btnPhong_Click);
             this.btnPhong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             // 
             // btnVatDung
@@ -126,6 +127,7 @@
             this.btnThuePhong.TabIndex = 5;
             this.btnThuePhong.Text = "Quản lý thuê phong";
             this.btnThuePhong.UseVisualStyleBackColor = true;
+            this.btnThuePhong.Click += new System.EventHandler(this.btnThuePhong_Click);
             this.btnThuePhong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             // 
             // btnKhachHang
@@ -136,6 +138,7 @@
             this.btnKhachHang.TabIndex = 3;
             this.btnKhachHang.Text = "Quản lý khách hàng";
             this.btnKhachHang.UseVisualStyleBackColor = true;
+            this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             this.btnKhachHang.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             // 
             // btnSuDungDV
@@ -146,6 +149,7 @@
             this.btnSuDungDV.TabIndex = 6;
             this.btnSuDungDV.Text = "Quản lý sử dụng dịch vụ";
             this.btnSuDungDV.UseVisualStyleBackColor = true;
+            this.btnSuDungDV.Click += new System.EventHandler(this.btnSuDungDV_Click);
             this.btnSuDungDV.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             // 
             // btnThanhToan
@@ -156,6 +160,7 @@
             this.btnThanhToan.TabIndex = 7;
             this.btnThanhToan.Text = "Thanh Toán";
             this.btnThanhToan.UseVisualStyleBackColor = true;
+            this.btnThanhToan.Click += new System.EventHandler(this.btnThanhToan_Click);
             this.btnThanhToan.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             // 
             // btnDichVu
@@ -166,6 +171,7 @@
             this.btnDichVu.TabIndex = 4;
             this.btnDichVu.Text = "Quản lý dịch vụ";
             this.btnDichVu.UseVisualStyleBackColor = true;
+            this.btnDichVu.Click += new System.EventHandler(this.btnDichVu_Click);
             this.btnDichVu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.frmMain_KeyDown);
             // 
             // frmMain

@@ -203,7 +203,7 @@ namespace TTN_QuanLyKhachSan
 
         private void cboMaPh_TextChanged(object sender, EventArgs e)
         {
-           
+
         }
 
     }

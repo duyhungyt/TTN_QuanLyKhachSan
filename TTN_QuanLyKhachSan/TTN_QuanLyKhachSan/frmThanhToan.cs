@@ -39,11 +39,6 @@ namespace TTN_QuanLyKhachSan
             return sum * cost;
         }
 
-        private void grbThuephong_Enter(object sender, EventArgs e)
-        {
-
-        }
-
         private void frmThanhToan_Load(object sender, EventArgs e)
         {
             DateTime date = DateTime.Today.AddDays(0);
@@ -153,6 +148,11 @@ namespace TTN_QuanLyKhachSan
             }
             MessageBox.Show("OK!");
             ckcAll_CheckedChanged(sender, e);
+        }
+
+        private void grbThuephong_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

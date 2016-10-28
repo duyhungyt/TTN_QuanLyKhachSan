@@ -116,6 +116,7 @@ namespace TTN_QuanLyKhachSan
 
                     ecHD.MaHD = date.Day.ToString() + date.Month.ToString() + dgvThongtin.Rows[i].Cells["SoPhong"].Value.ToString();
                     ecHD.MaPhieuThue = ecPT.MaPhieu;
+                    ecHD.ThanhTien = "0";
                     dalHD.ThemThongTin(ecHD);
 
                 }

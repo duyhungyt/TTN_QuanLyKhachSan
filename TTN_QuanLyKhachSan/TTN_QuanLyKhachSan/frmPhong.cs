@@ -63,25 +63,15 @@ namespace TTN_QuanLyKhachSan
 
         private void dgvDanhSach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            MoChucNang();
-            btnLamMoi.Enabled = true;
-            btnLuu.Enabled = true;
-            try
-            {
-
-                int dong = e.RowIndex;/*biến dòng :kich vào dòng thì chỉ số dòng đc lưu vào biến dòng */              
-                txtMaPhong.Text = dgvDanhSach.Rows[dong].Cells[0].Value.ToString();
-                txtSoPhong.Text = dgvDanhSach.Rows[dong].Cells[1].Value.ToString();
-                txtTrangThai.Text = dgvDanhSach.Rows[dong].Cells[2].Value.ToString();
-            }
-            catch
-            {
-
-            }
+            int dong = e.RowIndex;/*biến dòng :kich vào dòng thì chỉ số dòng đc lưu vào biến dòng */              
+            txtMaPhong.Text = dgvDanhSach.Rows[dong].Cells[0].Value.ToString();
+            txtSoPhong.Text = dgvDanhSach.Rows[dong].Cells[1].Value.ToString();
+            txtTrangThai.Text = dgvDanhSach.Rows[dong].Cells[2].Value.ToString();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            dgvDanhSach.Enabled = false;
             //kich hoat cac chuc nang
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
@@ -94,12 +84,14 @@ namespace TTN_QuanLyKhachSan
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            dgvDanhSach.Enabled = false;
             //kich hoat cac chuc năng
             btnThem.Enabled = false;
             btnSua.Enabled = false;
             btnXoa.Enabled = false;
+
             btnLuu.Enabled = true;
-           // MoChucNang();
+            MoChucNang();
             txtMaPhong.ReadOnly = true;           
             themmoi = false;
         }
@@ -196,6 +188,7 @@ namespace TTN_QuanLyKhachSan
                 KhoaChucNang();/*không cho thao tác*/
                 HienThi("");
             }
+            dgvDanhSach.Enabled = true;
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

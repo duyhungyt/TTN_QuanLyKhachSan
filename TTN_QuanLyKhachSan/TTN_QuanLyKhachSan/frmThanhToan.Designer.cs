@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThanhToan));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.grbThuephong = new System.Windows.Forms.GroupBox();
             this.ckcAll = new System.Windows.Forms.CheckBox();
             this.txtMaHD = new System.Windows.Forms.TextBox();
@@ -64,6 +66,7 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.grbThuephong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtin)).BeginInit();
             this.SuspendLayout();
@@ -77,14 +80,25 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.pictureBox1);
             this.splitContainer1.Panel1.Controls.Add(this.grbThuephong);
             // 
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dgvThongtin);
-            this.splitContainer1.Size = new System.Drawing.Size(797, 426);
-            this.splitContainer1.SplitterDistance = 159;
+            this.splitContainer1.Size = new System.Drawing.Size(769, 426);
+            this.splitContainer1.SplitterDistance = 214;
             this.splitContainer1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(369, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(378, 211);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
             // 
             // grbThuephong
             // 
@@ -99,10 +113,9 @@
             this.grbThuephong.Controls.Add(this.label4);
             this.grbThuephong.Controls.Add(this.dtpNgayra);
             this.grbThuephong.Controls.Add(this.label1);
-            this.grbThuephong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.grbThuephong.Location = new System.Drawing.Point(0, 0);
+            this.grbThuephong.Location = new System.Drawing.Point(3, 0);
             this.grbThuephong.Name = "grbThuephong";
-            this.grbThuephong.Size = new System.Drawing.Size(797, 159);
+            this.grbThuephong.Size = new System.Drawing.Size(360, 211);
             this.grbThuephong.TabIndex = 1;
             this.grbThuephong.TabStop = false;
             this.grbThuephong.Text = "Thông tin thuê phòng";
@@ -111,7 +124,7 @@
             // ckcAll
             // 
             this.ckcAll.AutoSize = true;
-            this.ckcAll.Location = new System.Drawing.Point(128, 121);
+            this.ckcAll.Location = new System.Drawing.Point(135, 145);
             this.ckcAll.Name = "ckcAll";
             this.ckcAll.Size = new System.Drawing.Size(111, 17);
             this.ckcAll.TabIndex = 18;
@@ -121,7 +134,7 @@
             // 
             // txtMaHD
             // 
-            this.txtMaHD.Location = new System.Drawing.Point(255, 80);
+            this.txtMaHD.Location = new System.Drawing.Point(278, 71);
             this.txtMaHD.Name = "txtMaHD";
             this.txtMaHD.Size = new System.Drawing.Size(10, 20);
             this.txtMaHD.TabIndex = 17;
@@ -129,7 +142,7 @@
             // 
             // txtMaKH
             // 
-            this.txtMaKH.Location = new System.Drawing.Point(255, 36);
+            this.txtMaKH.Location = new System.Drawing.Point(278, 33);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.Size = new System.Drawing.Size(10, 20);
             this.txtMaKH.TabIndex = 16;
@@ -137,19 +150,19 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(553, 78);
+            this.button2.Location = new System.Drawing.Point(197, 173);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 15;
+            this.button2.TabIndex = 4;
             this.button2.Text = "Hủy";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // btnThanhtoan
             // 
-            this.btnThanhtoan.Location = new System.Drawing.Point(387, 80);
+            this.btnThanhtoan.Location = new System.Drawing.Point(91, 173);
             this.btnThanhtoan.Name = "btnThanhtoan";
             this.btnThanhtoan.Size = new System.Drawing.Size(75, 23);
-            this.btnThanhtoan.TabIndex = 14;
+            this.btnThanhtoan.TabIndex = 3;
             this.btnThanhtoan.Text = "Thanh toán";
             this.btnThanhtoan.UseVisualStyleBackColor = true;
             this.btnThanhtoan.Click += new System.EventHandler(this.btnThanhtoan_Click);
@@ -157,25 +170,25 @@
             // cmbKhachhang
             // 
             this.cmbKhachhang.FormattingEnabled = true;
-            this.cmbKhachhang.Location = new System.Drawing.Point(128, 36);
+            this.cmbKhachhang.Location = new System.Drawing.Point(135, 33);
             this.cmbKhachhang.Name = "cmbKhachhang";
-            this.cmbKhachhang.Size = new System.Drawing.Size(121, 21);
-            this.cmbKhachhang.TabIndex = 13;
+            this.cmbKhachhang.Size = new System.Drawing.Size(137, 21);
+            this.cmbKhachhang.TabIndex = 0;
             this.cmbKhachhang.SelectedIndexChanged += new System.EventHandler(this.cmbKhachhang_SelectedIndexChanged);
             // 
             // cmbMahd
             // 
             this.cmbMahd.FormattingEnabled = true;
-            this.cmbMahd.Location = new System.Drawing.Point(128, 80);
+            this.cmbMahd.Location = new System.Drawing.Point(135, 71);
             this.cmbMahd.Name = "cmbMahd";
-            this.cmbMahd.Size = new System.Drawing.Size(121, 21);
-            this.cmbMahd.TabIndex = 11;
+            this.cmbMahd.Size = new System.Drawing.Size(137, 21);
+            this.cmbMahd.TabIndex = 1;
             this.cmbMahd.TextChanged += new System.EventHandler(this.cmbMahd_TextChanged);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(54, 85);
+            this.label5.Location = new System.Drawing.Point(62, 74);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 13);
             this.label5.TabIndex = 10;
@@ -184,7 +197,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(299, 42);
+            this.label4.Location = new System.Drawing.Point(62, 114);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(47, 13);
             this.label4.TabIndex = 9;
@@ -192,16 +205,16 @@
             // 
             // dtpNgayra
             // 
-            this.dtpNgayra.Location = new System.Drawing.Point(387, 36);
+            this.dtpNgayra.Location = new System.Drawing.Point(135, 109);
             this.dtpNgayra.Name = "dtpNgayra";
-            this.dtpNgayra.Size = new System.Drawing.Size(200, 20);
-            this.dtpNgayra.TabIndex = 7;
+            this.dtpNgayra.Size = new System.Drawing.Size(137, 20);
+            this.dtpNgayra.TabIndex = 2;
             this.dtpNgayra.Value = new System.DateTime(2016, 10, 12, 0, 0, 0, 0);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 43);
+            this.label1.Location = new System.Drawing.Point(62, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 13);
             this.label1.TabIndex = 0;
@@ -243,7 +256,7 @@
             this.dgvThongtin.RowHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             this.dgvThongtin.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvThongtin.Size = new System.Drawing.Size(797, 263);
+            this.dgvThongtin.Size = new System.Drawing.Size(769, 208);
             this.dgvThongtin.TabIndex = 1;
             // 
             // STT
@@ -378,7 +391,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 426);
+            this.ClientSize = new System.Drawing.Size(769, 426);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmThanhToan";
             this.Text = "Thanh Toán";
@@ -387,6 +400,7 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.grbThuephong.ResumeLayout(false);
             this.grbThuephong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvThongtin)).EndInit();
@@ -426,5 +440,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn DonGia;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

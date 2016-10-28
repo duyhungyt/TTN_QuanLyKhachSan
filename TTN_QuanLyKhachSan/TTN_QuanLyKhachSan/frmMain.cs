@@ -59,5 +59,39 @@ namespace TTN_QuanLyKhachSan
             frmTB.ShowDialog();
         }
 
+        private void btnThuePhong_Click(object sender, EventArgs e)
+        {
+            Form frmThue = new frmThuePhong();
+            frmThue.ShowDialog();
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+            Form frmThanhToan = new frmThanhToan();
+            frmThanhToan.ShowDialog();
+        }
+
+        private void btnDichVu_Click(object sender, EventArgs e)
+        {
+            Form frmDV = new frmQuanLyDV();
+            frmDV.ShowDialog();
+        }
+
+        private void btnPhong_Click(object sender, EventArgs e)
+        {
+            Form frmPhong = new frmPhong();
+            frmPhong.ShowDialog();
+        }
+
+        private void btnKhachHang_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSuDungDV_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
