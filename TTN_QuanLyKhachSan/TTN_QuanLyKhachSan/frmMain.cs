@@ -85,12 +85,14 @@ namespace TTN_QuanLyKhachSan
 
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
-
+            Form frmKH = new frmQuanLyKhachHang();
+            frmKH.ShowDialog();
         }
 
         private void btnSuDungDV_Click(object sender, EventArgs e)
         {
-
+            Form frmSD = new frmSuDungDV();
+            frmSD.ShowDialog();
         }
 
     }

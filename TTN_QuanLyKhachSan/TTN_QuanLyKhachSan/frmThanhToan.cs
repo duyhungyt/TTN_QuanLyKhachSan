@@ -125,6 +125,7 @@ namespace TTN_QuanLyKhachSan
 
         private void btnThanhtoan_Click(object sender, EventArgs e)
         {
+            int sum = 0;
             for (int i = 0; i < dgvThongtin.RowCount; i++)
             {
                 ecHD.MaPhieuThue = dgvThongtin.Rows[i].Cells["MaPh"].Value.ToString();
@@ -133,7 +134,7 @@ namespace TTN_QuanLyKhachSan
                 if (dgvThongtin.Rows[i].Cells["NgayRa"].Value.ToString() == "") ecHD.NgayRa = DateTime.Now.ToShortDateString();
                 else ecHD.NgayRa = dgvThongtin.Rows[i].Cells["NgayRa"].Value.ToString();
                 //tinh tien
-                int sum = getCost(Convert.ToDateTime(ecHD.NgayVao), Convert.ToDateTime(ecHD.NgayRa), int.Parse(dgvThongtin.Rows[i].Cells["DonGia"].Value.ToString()));
+                sum = getCost(Convert.ToDateTime(ecHD.NgayVao), Convert.ToDateTime(ecHD.NgayRa), int.Parse(dgvThongtin.Rows[i].Cells["DonGia"].Value.ToString()));
                 if (dgvThongtin.Rows[i].Cells["ThoiGian"].Value.ToString() != "") 
                     sum += getCost(Convert.ToDateTime(dgvThongtin.Rows[i].Cells["ThoiGian"].Value.ToString()), Convert.ToDateTime(ecHD.NgayRa), int.Parse(dgvThongtin.Rows[i].Cells["Gia"].Value.ToString()));
                 ecHD.ThanhTien = sum.ToString();
@@ -146,13 +147,8 @@ namespace TTN_QuanLyKhachSan
                 ecPh.TrangThai = "Tốt";
                 dalPh.SuaThongTin(ecPh);
             }
-            MessageBox.Show("OK!");
+            MessageBox.Show(sum.ToString());
             ckcAll_CheckedChanged(sender, e);
-        }
-
-        private void grbThuephong_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -29,11 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSuDungDV));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
             this.btnLuu = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtHoaDon = new System.Windows.Forms.TextBox();
@@ -48,23 +49,24 @@
             this.btnThem = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
+            this.txtTimPhong = new System.Windows.Forms.ToolStripTextBox();
+            this.txtTimDV = new System.Windows.Forms.ToolStripTextBox();
+            this.btnReset = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
-            this.txtTimPhong = new System.Windows.Forms.ToolStripTextBox();
-            this.btnReset = new System.Windows.Forms.ToolStripButton();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtTimDV = new System.Windows.Forms.ToolStripTextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -81,12 +83,12 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.dtpThoiGian);
             this.panel1.Controls.Add(this.btnLuu);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtHoaDon);
             this.panel1.Controls.Add(this.btnXoa);
-            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.cboDichVu);
             this.panel1.Controls.Add(this.label3);
@@ -99,6 +101,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(550, 214);
             this.panel1.TabIndex = 2;
+            // 
+            // dtpThoiGian
+            // 
+            this.dtpThoiGian.Location = new System.Drawing.Point(347, 113);
+            this.dtpThoiGian.Name = "dtpThoiGian";
+            this.dtpThoiGian.Size = new System.Drawing.Size(153, 21);
+            this.dtpThoiGian.TabIndex = 7;
             // 
             // btnLuu
             // 
@@ -125,11 +134,12 @@
             this.txtHoaDon.Enabled = false;
             this.txtHoaDon.Location = new System.Drawing.Point(94, 89);
             this.txtHoaDon.Name = "txtHoaDon";
-            this.txtHoaDon.Size = new System.Drawing.Size(77, 21);
+            this.txtHoaDon.Size = new System.Drawing.Size(102, 21);
             this.txtHoaDon.TabIndex = 12;
             // 
             // btnXoa
             // 
+            this.btnXoa.Enabled = false;
             this.btnXoa.Location = new System.Drawing.Point(199, 150);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 25);
@@ -142,7 +152,7 @@
             // 
             this.groupBox1.Controls.Add(this.labGio);
             this.groupBox1.Controls.Add(this.labNgay);
-            this.groupBox1.Location = new System.Drawing.Point(304, 54);
+            this.groupBox1.Location = new System.Drawing.Point(7, 13);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 100);
             this.groupBox1.TabIndex = 10;
@@ -242,6 +252,28 @@
             this.toolStripLabel1.Size = new System.Drawing.Size(28, 22);
             this.toolStripLabel1.Text = "Tìm";
             // 
+            // txtTimPhong
+            // 
+            this.txtTimPhong.Name = "txtTimPhong";
+            this.txtTimPhong.Size = new System.Drawing.Size(69, 25);
+            this.txtTimPhong.TextChanged += new System.EventHandler(this.txtTimPhong_TextChanged);
+            // 
+            // txtTimDV
+            // 
+            this.txtTimDV.Name = "txtTimDV";
+            this.txtTimDV.Size = new System.Drawing.Size(148, 25);
+            this.txtTimDV.TextChanged += new System.EventHandler(this.txtTimDV_TextChanged);
+            // 
+            // btnReset
+            // 
+            this.btnReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
+            this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(39, 22);
+            this.btnReset.Text = "Reset";
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.dgvDanhSach);
@@ -255,14 +287,14 @@
             // 
             this.dgvDanhSach.AllowUserToAddRows = false;
             this.dgvDanhSach.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDanhSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDanhSach.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.TenPhong,
@@ -285,29 +317,13 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // dtpThoiGian
+            // panel3
             // 
-            this.dtpThoiGian.Location = new System.Drawing.Point(326, 160);
-            this.dtpThoiGian.Name = "dtpThoiGian";
-            this.dtpThoiGian.Size = new System.Drawing.Size(153, 21);
-            this.dtpThoiGian.TabIndex = 7;
-            this.dtpThoiGian.Visible = false;
-            // 
-            // txtTimPhong
-            // 
-            this.txtTimPhong.Name = "txtTimPhong";
-            this.txtTimPhong.Size = new System.Drawing.Size(69, 25);
-            this.txtTimPhong.TextChanged += new System.EventHandler(this.txtTimPhong_TextChanged);
-            // 
-            // btnReset
-            // 
-            this.btnReset.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
-            this.btnReset.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(39, 22);
-            this.btnReset.Text = "Reset";
-            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
+            this.panel3.Controls.Add(this.groupBox1);
+            this.panel3.Location = new System.Drawing.Point(307, 41);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(210, 116);
+            this.panel3.TabIndex = 14;
             // 
             // TenPhong
             // 
@@ -321,14 +337,14 @@
             this.TenDV.DataPropertyName = "TenDV";
             this.TenDV.HeaderText = "Dịch vụ";
             this.TenDV.Name = "TenDV";
-            this.TenDV.Width = 150;
+            this.TenDV.Width = 135;
             // 
             // ThoiGian
             // 
             this.ThoiGian.DataPropertyName = "ThoiGian";
-            dataGridViewCellStyle4.Format = "G";
-            dataGridViewCellStyle4.NullValue = null;
-            this.ThoiGian.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.Format = "G";
+            dataGridViewCellStyle2.NullValue = null;
+            this.ThoiGian.DefaultCellStyle = dataGridViewCellStyle2;
             this.ThoiGian.HeaderText = "Thời gian";
             this.ThoiGian.Name = "ThoiGian";
             this.ThoiGian.Width = 150;
@@ -338,7 +354,7 @@
             this.MaHD.DataPropertyName = "MaHD";
             this.MaHD.HeaderText = "Hóa đơn";
             this.MaHD.Name = "MaHD";
-            this.MaHD.Width = 80;
+            this.MaHD.Width = 95;
             // 
             // DonGia
             // 
@@ -346,12 +362,6 @@
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.Width = 90;
-            // 
-            // txtTimDV
-            // 
-            this.txtTimDV.Name = "txtTimDV";
-            this.txtTimDV.Size = new System.Drawing.Size(148, 25);
-            this.txtTimDV.TextChanged += new System.EventHandler(this.txtTimDV_TextChanged);
             // 
             // frmSuDungDV
             // 
@@ -372,6 +382,7 @@
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -392,7 +403,6 @@
         private System.Windows.Forms.Label labNgay;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.TextBox txtHoaDon;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnLuu;
         private System.Windows.Forms.ToolStrip toolStrip1;
@@ -401,6 +411,8 @@
         private System.Windows.Forms.ToolStripTextBox txtTimPhong;
         private System.Windows.Forms.ToolStripButton btnReset;
         private System.Windows.Forms.ToolStripTextBox txtTimDV;
+        private System.Windows.Forms.TextBox txtHoaDon;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenPhong;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenDV;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGian;

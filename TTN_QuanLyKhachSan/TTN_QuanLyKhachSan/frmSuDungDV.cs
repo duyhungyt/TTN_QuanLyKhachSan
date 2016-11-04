@@ -54,6 +54,7 @@ namespace TTN_QuanLyKhachSan
             cboDichVu.AutoCompleteCustomSource = source;
 
             dgvDanhSach.DataSource = DAL_SuDung.getDanhSach();
+            if (dgvDanhSach.RowCount != 0) btnXoa.Enabled = true;
             _koload = true;
         }
 
@@ -83,6 +84,7 @@ namespace TTN_QuanLyKhachSan
             cboDichVu.ResetText();
             txtHoaDon.ResetText();
             _them = true;
+            btnXoa.Enabled = true;
         }
 
         private void cboPhong_TextChanged(object sender, EventArgs e)
@@ -146,6 +148,7 @@ namespace TTN_QuanLyKhachSan
             dgvDanhSach.DataSource = DAL_SuDung.getDanhSach();
             timer1.Enabled = true;
             dtpThoiGian.ResetText();
+            if (dgvDanhSach.RowCount == 0) btnXoa.Enabled = false;
             _xoa = false;
         }
 

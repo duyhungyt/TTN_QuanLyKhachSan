@@ -103,7 +103,7 @@ namespace TTN_QuanLyKhachSan
                     ecPT.MaKH = txtMaKH.Text;
                     ecPT.MaPT = txtMaPT.Text;
                     DateTime date = DateTime.Now;
-                    ecPT.MaPhieu = date.Day.ToString() + date.Month.ToString() + dgvThongtin.Rows[i].Cells["SoPhong"].Value.ToString();
+                    ecPT.MaPhieu = date.Day.ToString() + date.Month.ToString() + date.Hour.ToString() + date.Minute.ToString() + date.Second.ToString() + dgvThongtin.Rows[i].Cells["SoPhong"].Value.ToString();
 
                     DAL_PhieuThue dalPhieuthue = new DAL_PhieuThue();
                     dalPhieuthue.ThemThongTin(ecPT);
@@ -114,11 +114,12 @@ namespace TTN_QuanLyKhachSan
                     ecPh.TrangThai = "Đã thuê";
                     dalPh.SuaThongTin(ecPh);
 
-                    ecHD.MaHD = date.Day.ToString() + date.Month.ToString() + dgvThongtin.Rows[i].Cells["SoPhong"].Value.ToString();
+                    ecHD.MaHD = ecPT.MaPhieu;
                     ecHD.MaPhieuThue = ecPT.MaPhieu;
                     ecHD.ThanhTien = "0";
+                    if (ckcChuabiet.Checked == false) ecHD.NgayRa = dtpNgayra.Value.ToShortDateString();
+                    else ecHD.NgayRa = "";
                     dalHD.ThemThongTin(ecHD);
-
                 }
             }
             MessageBox.Show("Thuê OK!");
@@ -140,7 +141,7 @@ namespace TTN_QuanLyKhachSan
         {
             DataTable tb = cn.GetDataTable("Select distinct MaPT, tenPT from tblPhuongThucThue");
             txtMaPT.Text = findCode(cmbPhuongthuc.Text, "TenPT", "MaPT", tb);
-            if (cmbPhuongthuc.Text.ToString() == "Qua đêm")
+            if (cmbPhuongthuc.Text == "Qua đêm")
             {
                 DateTime dateOut = dtpNgayvao.Value;
                 dateOut = dateOut.AddDays(1);

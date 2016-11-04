@@ -43,7 +43,7 @@ namespace DAL
 
         public string getMaHD(string MaPhong)
         {
-            return connect.GetValue(@"select MaHD from tblHoaDon, tblPhieuThue, tblPhong where tblPhieuThue.MaPhieu = tblHoaDon.MaPhieuThue and tblPhieuThue.MaPh = tblPhong.MaPh and SoPhong = '" + MaPhong + "'");
+            return connect.GetValue(@"select MaHD from tblHoaDon, tblPhieuThue, tblPhong where tblHoaDon.ThanhTien = 0 and tblPhieuThue.MaPhieu = tblHoaDon.MaPhieuThue and tblPhieuThue.MaPh = tblPhong.MaPh and SoPhong = '" + MaPhong + "'");
         }
     }
 }

@@ -296,7 +296,7 @@
             this.ClientSize = new System.Drawing.Size(537, 370);
             this.Controls.Add(this.splitContainer1);
             this.Name = "frmThuePhong";
-            this.Text = "frmThuePhong";
+            this.Text = "Thuê phòng";
             this.Load += new System.EventHandler(this.frmThuePhong_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

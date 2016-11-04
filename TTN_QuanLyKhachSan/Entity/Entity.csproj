@@ -41,11 +41,11 @@
   <ItemGroup>
     <Compile Include="EC_DichVu.cs" />
     <Compile Include="EC_HoaDon.cs" />
+    <Compile Include="EC_KhachHang.cs" />
     <Compile Include="EC_NhanVien.cs" />
     <Compile Include="EC_PhieuThue.cs" />
     <Compile Include="EC_Phong.cs" />
-    <Compile Include="EC_PhuongThucThue.cs" />
-    <Compile Include="EC_SuDungDV.cs" />
+    <Compile Include="EC_SuDungDichVu.cs" />
     <Compile Include="EC_TaiKhoan.cs" />
     <Compile Include="EC_ThietBi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

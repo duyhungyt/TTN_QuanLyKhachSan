@@ -21,7 +21,6 @@ namespace TTN_QuanLyKhachSan
         public void SetNull()
         {
             cbMaKH.Text = "";
-            cbGT.Text = "";
             txtName.Text = "";
             txtSDT.Text = "";
             txtDiaChi.Text = "";
@@ -33,6 +32,7 @@ namespace TTN_QuanLyKhachSan
             txtDiaChi.ReadOnly = false;
             txtSDT.ReadOnly = false;
             txtCMND.ReadOnly = false;
+            dgvKhachHang.Enabled = false;
         }
         public void KhoaDieuKhien()
         {
@@ -40,12 +40,13 @@ namespace TTN_QuanLyKhachSan
             txtDiaChi.ReadOnly = true;
             txtSDT.ReadOnly = true;
             txtCMND.ReadOnly = true;
+            dgvKhachHang.Enabled = true;
         }
         public void Value()
         {
             customer.MaKH = cbMaKH.Text;
             customer.TenKH = txtName.Text;
-            customer.NgaySinh = dtp.Value.ToShortDateString();
+            customer.NgaySinh = dtp.Text;
             customer.SoDT = txtSDT.Text;
             customer.GT = cbGT.Text;
             customer.DiaChi = txtDiaChi.Text;
@@ -77,7 +78,6 @@ namespace TTN_QuanLyKhachSan
         {
             KhoaDieuKhien();
             btnSave.Enabled = false;
-            btnRefresh.Enabled = false;
             dt = KhachHang.getAllKhachHang();
             dgvKhachHang.DataSource = dt;
         }
@@ -90,12 +90,12 @@ namespace TTN_QuanLyKhachSan
             if (traloi == DialogResult.OK)
             {
                 KhachHang.Xoa(customer);
+                btnRefresh_Click(null, null);
             }
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            SetNull();
             dt = KhachHang.getAllKhachHang();
             dgvKhachHang.DataSource = dt;
             KhoaDieuKhien();
@@ -103,7 +103,6 @@ namespace TTN_QuanLyKhachSan
             btnDel.Enabled = true;
             btnSave.Enabled = false;
             btnEdit.Enabled = true;
-            btnRefresh.Enabled = false;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -115,8 +114,6 @@ namespace TTN_QuanLyKhachSan
             btnSave.Enabled = true;
             btnRefresh.Enabled = true;
             SetNull();
-            cbGT.DataSource = KhachHang.getGioiTinh();
-            cbGT.DisplayMember = "GT";
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
@@ -127,8 +124,6 @@ namespace TTN_QuanLyKhachSan
             btnDel.Enabled = false;
             btnSave.Enabled = true;
             btnRefresh.Enabled = true;
-            cbGT.DataSource = KhachHang.getGioiTinh();
-            cbGT.DisplayMember = "GT";
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -153,6 +148,8 @@ namespace TTN_QuanLyKhachSan
                 KhachHang.Sua(customer);
                 MessageBox.Show("Đã Sửa Thành Công !!!", "Thông Báo", MessageBoxButtons.OK);
             }
+            btnRefresh_Click(null, null);
+            KhoaDieuKhien();
         }
 
         private void btnThoat_Click(object sender, EventArgs e)

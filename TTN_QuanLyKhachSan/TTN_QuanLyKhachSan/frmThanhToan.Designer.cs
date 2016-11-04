@@ -119,7 +119,6 @@
             this.grbThuephong.TabIndex = 1;
             this.grbThuephong.TabStop = false;
             this.grbThuephong.Text = "Thông tin thuê phòng";
-            this.grbThuephong.Enter += new System.EventHandler(this.grbThuephong_Enter);
             // 
             // ckcAll
             // 

@@ -20,3 +20,5 @@ F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSa
 F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.frmThanhToan.resources
 F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.frmThuePhong.resources
 F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.frmQuanLyDV.resources
+F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.frmQuanLyKhachHang.resources
+F:\Hoc tap\Thuc tap nhom\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\TTN_QuanLyKhachSan\obj\Debug\TTN_QuanLyKhachSan.frmSuDungDV.resources
