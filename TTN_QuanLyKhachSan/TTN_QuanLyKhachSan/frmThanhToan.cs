@@ -134,11 +134,9 @@ namespace TTN_QuanLyKhachSan
                 if (dgvThongtin.Rows[i].Cells["NgayRa"].Value.ToString() == "") ecHD.NgayRa = DateTime.Now.ToShortDateString();
                 else ecHD.NgayRa = dgvThongtin.Rows[i].Cells["NgayRa"].Value.ToString();
                 //tinh tien
-                sum = getCost(Convert.ToDateTime(ecHD.NgayVao), Convert.ToDateTime(ecHD.NgayRa), int.Parse(dgvThongtin.Rows[i].Cells["DonGia"].Value.ToString()));
                 if (dgvThongtin.Rows[i].Cells["ThoiGian"].Value.ToString() != "") 
                     sum += getCost(Convert.ToDateTime(dgvThongtin.Rows[i].Cells["ThoiGian"].Value.ToString()), Convert.ToDateTime(ecHD.NgayRa), int.Parse(dgvThongtin.Rows[i].Cells["Gia"].Value.ToString()));
-                ecHD.ThanhTien = sum.ToString();
-                dalHD.SuaThongTin(ecHD);
+                
 
                 //thay doi thong tin phong
                 EC_Phong ecPh = new EC_Phong();
@@ -147,8 +145,14 @@ namespace TTN_QuanLyKhachSan
                 ecPh.TrangThai = "Tốt";
                 dalPh.SuaThongTin(ecPh);
             }
+            sum += getCost(Convert.ToDateTime(ecHD.NgayVao), Convert.ToDateTime(ecHD.NgayRa), int.Parse(dgvThongtin.Rows[0].Cells["DonGia"].Value.ToString()));
+            ecHD.ThanhTien = sum.ToString();
+            dalHD.SuaThongTin(ecHD);
+
             MessageBox.Show(sum.ToString());
-            ckcAll_CheckedChanged(sender, e);
+            frmThanhToan_Load(sender, e);
         }
+
+
     }
 }
