@@ -73,7 +73,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(598, 240);
+            this.panel1.Size = new System.Drawing.Size(601, 240);
             this.panel1.TabIndex = 3;
             // 
             // groupBox1
@@ -141,7 +141,7 @@
             // 
             this.dtp.Location = new System.Drawing.Point(88, 76);
             this.dtp.Name = "dtp";
-            this.dtp.Size = new System.Drawing.Size(204, 20);
+            this.dtp.Size = new System.Drawing.Size(134, 20);
             this.dtp.TabIndex = 2;
             // 
             // btnDel
@@ -221,7 +221,7 @@
             // 
             this.txtCMND.Location = new System.Drawing.Point(88, 102);
             this.txtCMND.Name = "txtCMND";
-            this.txtCMND.Size = new System.Drawing.Size(204, 20);
+            this.txtCMND.Size = new System.Drawing.Size(134, 20);
             this.txtCMND.TabIndex = 4;
             // 
             // txtSDT
@@ -259,11 +259,11 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(325, 105);
+            this.label5.Location = new System.Drawing.Point(309, 105);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.Size = new System.Drawing.Size(75, 13);
             this.label5.TabIndex = 4;
-            this.label5.Text = "Điện Thoại";
+            this.label5.Text = "Số Điện Thoại";
             // 
             // label4
             // 
@@ -307,7 +307,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 240);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(598, 147);
+            this.panel2.Size = new System.Drawing.Size(601, 144);
             this.panel2.TabIndex = 4;
             // 
             // dgvKhachHang
@@ -333,7 +333,7 @@
             this.dgvKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvKhachHang.Location = new System.Drawing.Point(0, 0);
             this.dgvKhachHang.Name = "dgvKhachHang";
-            this.dgvKhachHang.Size = new System.Drawing.Size(598, 147);
+            this.dgvKhachHang.Size = new System.Drawing.Size(601, 144);
             this.dgvKhachHang.TabIndex = 12;
             this.dgvKhachHang.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachHang_CellClick);
             // 
@@ -386,7 +386,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(598, 387);
+            this.ClientSize = new System.Drawing.Size(601, 384);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "frmQuanLyKhachHang";

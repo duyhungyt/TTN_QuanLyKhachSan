@@ -89,6 +89,7 @@ namespace TTN_QuanLyKhachSan
             dalPh.TraPhong(ph);
             cmbKhachhang.ResetText();
             cmbMahd.ResetText();
+            dgvThongtin.DataSource = null;
         }
     }
 }
