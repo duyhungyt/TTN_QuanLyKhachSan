@@ -19,7 +19,9 @@ namespace TTN_QuanLyKhachSan
         EC_PhieuThue ecPT = new EC_PhieuThue();
         EC_HoaDon ecHD = new EC_HoaDon();
         DAL_HoaDon dalHD = new DAL_HoaDon();
-        
+        private string _Gia;
+        private bool _load;
+
         public frmThuePhong()
         {
             InitializeComponent();
@@ -35,6 +37,7 @@ namespace TTN_QuanLyKhachSan
 
         private void frmThuePhong_Load(object sender, EventArgs e)
         {
+            _load = true;
             DateTime date = DateTime.Today.AddDays(0);
             dtpNgayvao.Value = date;
             //load dgvThongTin
@@ -56,15 +59,17 @@ namespace TTN_QuanLyKhachSan
             txtMaKH.Text = findCode(cmbKhachhang.Text, "TenKH", "MaKH", tb);
             
             //load Phuongthuc
-            tb = cn.GetDataTable("Select distinct MaPT, tenPT from tblPhuongThucThue");
+            tb = cn.GetDataTable("Select distinct MaPT, TenPT from tblPhuongThucThue");
             cmbPhuongthuc.DataSource = tb;
-            cmbPhuongthuc.DisplayMember= "tenPT";
+            cmbPhuongthuc.DisplayMember= "TenPT";
+            cmbPhuongthuc.ValueMember = "MaPT";
+            cmbPhuongthuc.ResetText();
             txtMaPT.Text = findCode(cmbPhuongthuc.Text, "TenPT", "MaPT", tb);
 
             //lay dl vao ec
-            
-            ecHD.NgayVao = date.ToShortDateString();
-            
+
+            ecHD.NgayVao = dtpNgayvao.Text;
+            _load = false;
         }
 
         private void cmbKhachhang_SelectedIndexChanged(object sender, EventArgs e)
@@ -117,7 +122,8 @@ namespace TTN_QuanLyKhachSan
                     ecHD.MaHD = ecPT.MaPhieu;
                     ecHD.MaPhieuThue = ecPT.MaPhieu;
                     ecHD.ThanhTien = "0";
-                    if (ckcChuabiet.Checked == false) ecHD.NgayRa = dtpNgayra.Value.ToShortDateString();
+                    ecHD.Gia = _Gia;
+                    if (ckcChuabiet.Checked == false) ecHD.NgayRa = dtpNgayra.Text;
                     else ecHD.NgayRa = "";
                     dalHD.ThemThongTin(ecHD);
                 }
@@ -140,7 +146,11 @@ namespace TTN_QuanLyKhachSan
         private void cmbPhuongthuc_SelectedIndexChanged(object sender, EventArgs e)
         {
             DataTable tb = cn.GetDataTable("Select distinct MaPT, tenPT from tblPhuongThucThue");
-            txtMaPT.Text = findCode(cmbPhuongthuc.Text, "TenPT", "MaPT", tb);
+            if (!_load)
+            {
+                _Gia = cn.GetValue("select DonGia from tblPhuongThucThue where MaPT = '" + cmbPhuongthuc.SelectedValue.ToString() + "'");
+            }
+            txtMaPT.Text = findCode(cmbPhuongthuc.Text, "TenPT", "MaPT", tb);  
             if (cmbPhuongthuc.Text == "Qua đêm")
             {
                 DateTime dateOut = dtpNgayvao.Value;

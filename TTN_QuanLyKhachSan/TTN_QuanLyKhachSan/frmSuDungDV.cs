@@ -26,6 +26,7 @@ namespace TTN_QuanLyKhachSan
         private bool _them = false;
         private bool _xoa = false;
         private bool _koload = true;
+        private string _Gia;
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (!_chon)
@@ -102,6 +103,7 @@ namespace TTN_QuanLyKhachSan
 
             dtpThoiGian.Text = labNgay.Text;
             EC_SuDung.ThoiGian = dtpThoiGian.Text + " " + labGio.Text;
+            EC_SuDung.Gia = _Gia;
 
             DAL_SuDung.addSuDung(EC_SuDung);
             dgvDanhSach.DataSource = DAL_SuDung.getDanhSach();
@@ -180,6 +182,15 @@ namespace TTN_QuanLyKhachSan
             dk = "and TenDV like N'%" + txtTimDV.Text + "%'";
             if (txtTimPhong.Text != "") dk += " and SoPhong like '%" + txtTimPhong.Text + "%'";
             dgvDanhSach.DataSource = DAL_SuDung.getDanhSach(dk);
+        }
+
+        private void cboDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (_koload && cboDichVu.SelectedValue != null)
+            {
+                DAL_DichVu DV = new DAL_DichVu();
+                _Gia = DV.GetGia(cboDichVu.SelectedValue.ToString());
+            }
         }
     }
 }

@@ -43,5 +43,12 @@ namespace Entity
             get { return _ThanhTien; }
             set { _ThanhTien = value; }
         }
+
+        private string _Gia;
+        public string Gia
+        {
+            get { return _Gia; }
+            set { _Gia = value; }
+        }
     }
 }

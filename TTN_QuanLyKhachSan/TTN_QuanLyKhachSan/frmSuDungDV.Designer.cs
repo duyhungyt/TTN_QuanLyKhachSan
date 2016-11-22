@@ -34,14 +34,15 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labGio = new System.Windows.Forms.Label();
+            this.labNgay = new System.Windows.Forms.Label();
             this.dtpThoiGian = new System.Windows.Forms.DateTimePicker();
             this.btnLuu = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.txtHoaDon = new System.Windows.Forms.TextBox();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.labGio = new System.Windows.Forms.Label();
-            this.labNgay = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.cboDichVu = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -54,19 +55,18 @@
             this.btnReset = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel3 = new System.Windows.Forms.Panel();
             this.TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThoiGian = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -102,51 +102,13 @@
             this.panel1.Size = new System.Drawing.Size(550, 214);
             this.panel1.TabIndex = 2;
             // 
-            // dtpThoiGian
+            // panel3
             // 
-            this.dtpThoiGian.Location = new System.Drawing.Point(347, 113);
-            this.dtpThoiGian.Name = "dtpThoiGian";
-            this.dtpThoiGian.Size = new System.Drawing.Size(153, 21);
-            this.dtpThoiGian.TabIndex = 7;
-            // 
-            // btnLuu
-            // 
-            this.btnLuu.Enabled = false;
-            this.btnLuu.Location = new System.Drawing.Point(118, 150);
-            this.btnLuu.Name = "btnLuu";
-            this.btnLuu.Size = new System.Drawing.Size(75, 25);
-            this.btnLuu.TabIndex = 4;
-            this.btnLuu.Text = "Lưu";
-            this.btnLuu.UseVisualStyleBackColor = true;
-            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(34, 92);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 15);
-            this.label2.TabIndex = 13;
-            this.label2.Text = "Hóa đơn";
-            // 
-            // txtHoaDon
-            // 
-            this.txtHoaDon.Enabled = false;
-            this.txtHoaDon.Location = new System.Drawing.Point(94, 89);
-            this.txtHoaDon.Name = "txtHoaDon";
-            this.txtHoaDon.Size = new System.Drawing.Size(102, 21);
-            this.txtHoaDon.TabIndex = 12;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Enabled = false;
-            this.btnXoa.Location = new System.Drawing.Point(199, 150);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 25);
-            this.btnXoa.TabIndex = 5;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.panel3.Controls.Add(this.groupBox1);
+            this.panel3.Location = new System.Drawing.Point(307, 41);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(210, 116);
+            this.panel3.TabIndex = 14;
             // 
             // groupBox1
             // 
@@ -181,6 +143,52 @@
             this.labNgay.TabIndex = 10;
             this.labNgay.Text = "label2";
             // 
+            // dtpThoiGian
+            // 
+            this.dtpThoiGian.Location = new System.Drawing.Point(347, 113);
+            this.dtpThoiGian.Name = "dtpThoiGian";
+            this.dtpThoiGian.Size = new System.Drawing.Size(153, 21);
+            this.dtpThoiGian.TabIndex = 7;
+            // 
+            // btnLuu
+            // 
+            this.btnLuu.Enabled = false;
+            this.btnLuu.Location = new System.Drawing.Point(118, 150);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(75, 25);
+            this.btnLuu.TabIndex = 4;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.UseVisualStyleBackColor = true;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(34, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(54, 15);
+            this.label2.TabIndex = 13;
+            this.label2.Text = "Hóa đơn";
+            // 
+            // txtHoaDon
+            // 
+            this.txtHoaDon.Enabled = false;
+            this.txtHoaDon.Location = new System.Drawing.Point(94, 89);
+            this.txtHoaDon.Name = "txtHoaDon";
+            this.txtHoaDon.Size = new System.Drawing.Size(118, 21);
+            this.txtHoaDon.TabIndex = 12;
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Enabled = false;
+            this.btnXoa.Location = new System.Drawing.Point(199, 150);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 25);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -199,6 +207,7 @@
             this.cboDichVu.Name = "cboDichVu";
             this.cboDichVu.Size = new System.Drawing.Size(158, 23);
             this.cboDichVu.TabIndex = 2;
+            this.cboDichVu.SelectedIndexChanged += new System.EventHandler(this.cboDichVu_SelectedIndexChanged);
             this.cboDichVu.Validated += new System.EventHandler(this.cboDichVu_Validated);
             // 
             // label3
@@ -311,20 +320,6 @@
             this.dgvDanhSach.TabStop = false;
             this.dgvDanhSach.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellEnter);
             // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Location = new System.Drawing.Point(307, 41);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(210, 116);
-            this.panel3.TabIndex = 14;
-            // 
             // TenPhong
             // 
             this.TenPhong.DataPropertyName = "SoPhong";
@@ -337,7 +332,7 @@
             this.TenDV.DataPropertyName = "TenDV";
             this.TenDV.HeaderText = "Dịch vụ";
             this.TenDV.Name = "TenDV";
-            this.TenDV.Width = 135;
+            this.TenDV.Width = 125;
             // 
             // ThoiGian
             // 
@@ -347,14 +342,14 @@
             this.ThoiGian.DefaultCellStyle = dataGridViewCellStyle2;
             this.ThoiGian.HeaderText = "Thời gian";
             this.ThoiGian.Name = "ThoiGian";
-            this.ThoiGian.Width = 150;
+            this.ThoiGian.Width = 145;
             // 
             // MaHD
             // 
             this.MaHD.DataPropertyName = "MaHD";
             this.MaHD.HeaderText = "Hóa đơn";
             this.MaHD.Name = "MaHD";
-            this.MaHD.Width = 95;
+            this.MaHD.Width = 110;
             // 
             // DonGia
             // 
@@ -362,6 +357,12 @@
             this.DonGia.HeaderText = "Đơn giá";
             this.DonGia.Name = "DonGia";
             this.DonGia.Width = 90;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // frmSuDungDV
             // 
@@ -376,13 +377,13 @@
             this.Load += new System.EventHandler(this.frmSuDungDV_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
