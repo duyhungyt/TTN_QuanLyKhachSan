@@ -46,7 +46,7 @@ namespace TTN_QuanLyKhachSan
             customer.MaKH = cbMaKH.Text;
             customer.TenKH = txtName.Text;
             customer.NgaySinh = dtp.Value.ToShortDateString();
-            customer.SoDT = txtSDT.Text;
+            customer.SDT = txtSDT.Text;
             customer.GT = cbGT.Text;
             customer.DiaChi = txtDiaChi.Text;
             customer.CMND = txtCMND.Text;
@@ -86,7 +86,7 @@ namespace TTN_QuanLyKhachSan
         {
             DialogResult traloi;
             customer.MaKH = cbMaKH.Text;
-            traloi = MessageBox.Show("Bạn có muốn xóa???", "Questions", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            traloi = MessageBox.Show("Bạn có muốn xóa dữ liệu không???", "Questions", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
             if (traloi == DialogResult.OK)
             {
                 KhachHang.Xoa(customer);
@@ -138,8 +138,15 @@ namespace TTN_QuanLyKhachSan
                 Value();
                 if (cbMaKH.Text != "")
                 {
-                    KhachHang.Them(customer);
-                    MessageBox.Show("Thêm Mới Thành Công !!!", "Thông Báo", MessageBoxButtons.OK);
+                    if (KhachHang.Them(customer) == true)
+                    {
+                        MessageBox.Show("Thêm mới thành công !!!", "Thông Báo", MessageBoxButtons.OK);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Dữ liệu chưa được tạo mới!", "Thông Báo", MessageBoxButtons.OK);
+                    }
+                    
                 }
                 else
                 {
@@ -150,8 +157,14 @@ namespace TTN_QuanLyKhachSan
             else
             {
                 Value();
-                KhachHang.Sua(customer);
-                MessageBox.Show("Đã Sửa Thành Công !!!", "Thông Báo", MessageBoxButtons.OK);
+                if (KhachHang.Sua(customer)==true)
+                {
+                    MessageBox.Show("Đã Sửa Thành Công !!!", "Thông Báo", MessageBoxButtons.OK);
+                }
+                else
+                {
+                    MessageBox.Show("Dữ liệu chưa được thay đổi!", "Thông Báo", MessageBoxButtons.OK);
+                }
             }
         }
 

@@ -32,11 +32,11 @@ namespace Entity
             get { return _GT; }
             set { _GT = value; }
         }
-        private string _SoDT;
-        public string SoDT
+        private string _SDT;
+        public string SDT
         {
-            get { return _SoDT; }
-            set { _SoDT = value; }
+            get { return _SDT; }
+            set { _SDT = value; }
         }
         private string _CMND;
         public string CMND
