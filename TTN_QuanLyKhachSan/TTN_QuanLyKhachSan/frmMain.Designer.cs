@@ -85,6 +85,7 @@
             this.hướngDẫnToolStripMenuItem.Name = "hướngDẫnToolStripMenuItem";
             this.hướngDẫnToolStripMenuItem.Size = new System.Drawing.Size(102, 23);
             this.hướngDẫnToolStripMenuItem.Text = "Trợ giúp (F1)";
+            this.hướngDẫnToolStripMenuItem.Click += new System.EventHandler(this.hướngDẫnToolStripMenuItem_Click);
             // 
             // btnNguoiDung
             // 

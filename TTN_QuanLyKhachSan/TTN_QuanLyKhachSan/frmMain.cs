@@ -49,7 +49,8 @@ namespace TTN_QuanLyKhachSan
         {
             if (e.KeyCode == Keys.F1)
             {
-                MessageBox.Show("f1 dc an");
+                Form frmF1 = new frmHelp();
+                frmF1.Show();
             }
         }
 
@@ -95,5 +96,10 @@ namespace TTN_QuanLyKhachSan
             frmSD.ShowDialog();
         }
 
+        private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frmF1 = new frmHelp();
+            frmF1.Show();
+        }
     }
 }
